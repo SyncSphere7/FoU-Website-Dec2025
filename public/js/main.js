@@ -1,6 +1,22 @@
 // Friends of Uganda - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Floating Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
