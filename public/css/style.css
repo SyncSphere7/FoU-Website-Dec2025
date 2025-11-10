@@ -1,0 +1,506 @@
+/* Friends of Uganda - Custom Styles */
+/* Brand Colors: Yellow #FCDC04, Red #D90000, Black #000000, Grey #9CA69C */
+
+:root {
+    --brand-yellow: #FCDC04;
+    --brand-red: #D90000;
+    --brand-black: #000000;
+    --brand-grey: #9CA69C;
+    
+    /* Using Red as primary for strong impact, Yellow as accent */
+    --primary-color: #D90000;
+    --primary-dark: #B00000;
+    --primary-light: #FF1A1A;
+    --accent-color: #FCDC04;
+    --accent-dark: #D4B800;
+    --secondary-color: #9CA69C;
+    --dark-color: #000000;
+    --light-color: #F8F9FA;
+    --text-color: #000000;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    padding-top: 76px; /* Account for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--brand-red) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-dark .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+
+.navbar-dark .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-dark .nav-link.active {
+    font-weight: 600;
+    color: var(--accent-color) !important;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, var(--brand-red) 0%, var(--primary-dark) 50%, var(--brand-black) 100%);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23FCDC04" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.animate-fade-in-delay-3 {
+    animation: fadeIn 1s ease-out 0.9s both;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--brand-red) 0%, var(--primary-dark) 100%);
+    padding: 80px 0 60px;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Statistics Cards */
+.stat-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.stat-card i {
+    color: var(--accent-color);
+}
+
+.stat-card h3 {
+    margin: 1rem 0;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Statistics section background */
+section.bg-primary {
+    background-color: var(--brand-red) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--brand-red);
+    border-color: var(--brand-red);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(217, 0, 0, 0.3);
+}
+
+.btn-light {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--brand-black);
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: var(--brand-black);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(252, 220, 4, 0.4);
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--brand-black);
+}
+
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.6rem 1.5rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid var(--brand-grey);
+    padding: 0.75rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-red);
+    box-shadow: 0 0 0 0.2rem rgba(217, 0, 0, 0.25);
+}
+
+/* Social Links */
+.social-links a {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--accent-color) !important;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Partner Logos */
+.partner-logo {
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+/* SDG Badges */
+.sdg-badge {
+    transition: transform 0.3s ease;
+}
+
+.sdg-badge:hover {
+    transform: scale(1.05);
+}
+
+.bg-blue {
+    background-color: #1f93ff !important;
+}
+
+/* Bootstrap Color Overrides */
+.bg-primary {
+    background-color: var(--brand-red) !important;
+}
+
+.bg-dark {
+    background-color: var(--brand-black) !important;
+}
+
+.bg-secondary {
+    background-color: var(--brand-grey) !important;
+}
+
+.text-primary {
+    color: var(--brand-red) !important;
+}
+
+.text-dark {
+    color: var(--brand-black) !important;
+}
+
+.text-secondary {
+    color: var(--brand-grey) !important;
+}
+
+.border-primary {
+    border-color: var(--brand-red) !important;
+}
+
+/* Brand Color Utility Classes */
+.bg-brand-yellow {
+    background-color: var(--brand-yellow) !important;
+}
+
+.bg-brand-red {
+    background-color: var(--brand-red) !important;
+}
+
+.bg-brand-black {
+    background-color: var(--brand-black) !important;
+}
+
+.bg-brand-grey {
+    background-color: var(--brand-grey) !important;
+}
+
+.text-brand-yellow {
+    color: var(--brand-yellow) !important;
+}
+
+.text-brand-red {
+    color: var(--brand-red) !important;
+}
+
+.text-brand-black {
+    color: var(--brand-black) !important;
+}
+
+.text-brand-grey {
+    color: var(--brand-grey) !important;
+}
+
+/* Card accent colors */
+.card .text-primary {
+    color: var(--brand-red) !important;
+}
+
+/* Badge colors */
+.badge.bg-primary {
+    background-color: var(--brand-red) !important;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+/* Value items and objective items */
+.value-item h5.text-primary,
+.objective-item h5.text-primary {
+    color: var(--brand-red) !important;
+}
+
+/* Quote icons */
+.fa-quote-left.text-primary {
+    color: var(--brand-red) !important;
+}
+
+/* Team Member Images */
+.team-member-image {
+    margin: 0 auto;
+}
+
+.founder-image {
+    margin: 0 auto;
+}
+
+/* Gallery */
+.gallery-item {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Admin Sidebar */
+.sidebar {
+    min-height: calc(100vh - 56px);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar .nav-link {
+    color: #333;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #e9ecef;
+    color: var(--brand-red);
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--brand-red);
+    color: #fff;
+}
+
+/* Value Items */
+.value-item {
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Objective Items */
+.objective-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.objective-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px;
+    }
+
+    .hero-banner {
+        min-height: 80vh;
+    }
+
+    .display-3 {
+        font-size: 2.5rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+
+    .sidebar {
+        min-height: auto;
+    }
+}
+
+/* Loading Spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 5px;
+    border: none;
+}
+
+/* Table Styling */
+.table {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--brand-red);
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--brand-red);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+

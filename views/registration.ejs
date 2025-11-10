@@ -1,0 +1,193 @@
+<%- include('partials/header') %>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Join Us</h1>
+                    <p class="lead">Register to become part of the Friends of Uganda community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <form id="registrationForm">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="full_name" class="form-label fw-bold">Full Name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="full_name" name="full_name" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label fw-bold">Email Address <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="country" class="form-label fw-bold">Country</label>
+                                        <input type="text" class="form-control" id="country" name="country">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city" class="form-label fw-bold">City</label>
+                                        <input type="text" class="form-control" id="city" name="city">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="gender" class="form-label fw-bold">Gender</label>
+                                        <select class="form-select" id="gender" name="gender">
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                            <option value="Prefer not to say">Prefer not to say</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="age_group" class="form-label fw-bold">Age Group</label>
+                                        <select class="form-select" id="age_group" name="age_group">
+                                            <option value="">Select Age Group</option>
+                                            <option value="18-25">18-25</option>
+                                            <option value="26-35">26-35</option>
+                                            <option value="36-45">36-45</option>
+                                            <option value="46-55">46-55</option>
+                                            <option value="56+">56+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="interest" class="form-label fw-bold">Area of Interest <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="interest" name="interest" required>
+                                        <option value="">Select Area of Interest</option>
+                                        <option value="Peace Ambassador">Peace Ambassador</option>
+                                        <option value="Community Member">Community Member</option>
+                                        <option value="Partner">Partner Organization</option>
+                                        <option value="Sponsor">Sponsor</option>
+                                        <option value="Volunteer">General Volunteer</option>
+                                    </select>
+                                    <small class="form-text text-muted">Peace Ambassadors are trained community leaders who promote peace and unity in their areas.</small>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label fw-bold">Message (Optional)</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us why you're interested in joining Friends of Uganda and promoting peace, unity, and national preservation..."></textarea>
+                                </div>
+
+                                <% if (recaptchaSiteKey) { %>
+                                <div class="mb-3">
+                                    <div class="g-recaptcha" data-sitekey="<%= recaptchaSiteKey %>"></div>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <% } %>
+
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy_consent" required>
+                                        <label class="form-check-label" for="privacy_consent">
+                                            I agree to the <a href="/privacy" target="_blank">Privacy Policy</a> and consent to the processing of my personal data. <span class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Registration
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div id="successMessage" class="alert alert-success mt-3 d-none" role="alert">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span id="successText"></span>
+                            </div>
+
+                            <div id="errorMessage" class="alert alert-danger mt-3 d-none" role="alert">
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                                <span id="errorText"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <% if (recaptchaSiteKey) { %>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <% } %>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            const successText = document.getElementById('successText');
+            
+            // Reset messages
+            successMsg.classList.add('d-none');
+            errorMsg.classList.add('d-none');
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Submitting...';
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    successText.textContent = data.message || 'Thank you for registering! We will contact you soon.';
+                    successMsg.classList.remove('d-none');
+                    form.reset();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    if (data.errors) {
+                        errorText.textContent = data.errors.map(err => err.msg).join(', ');
+                    } else {
+                        errorText.textContent = data.message || 'An error occurred. Please try again.';
+                    }
+                    errorMsg.classList.remove('d-none');
+                }
+            } catch (error) {
+                errorText.textContent = 'An error occurred. Please try again.';
+                errorMsg.classList.remove('d-none');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Submit Registration';
+            }
+        });
+    </script>
+
+<%- include('partials/footer') %>
+

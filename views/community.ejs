@@ -1,0 +1,184 @@
+<%- include('partials/header') %>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Community</h1>
+                    <p class="lead">Join us in making a difference together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Upcoming Events</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brand-red">Upcoming</span>
+                                <small class="text-muted">2026</small>
+                            </div>
+                            <h5 class="fw-bold">Baraza for Peace</h5>
+                            <p class="text-muted">Community dialogue bringing together citizens from opposing political groups for structured reconciliation conversations and cross-party dialogue.</p>
+                            <p class="mb-0">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                <strong>Location:</strong> Various Communities Across Uganda
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-success">Registration Open</span>
+                                <small class="text-muted">Ongoing</small>
+                            </div>
+                            <h5 class="fw-bold">Peace Ambassador Training</h5>
+                            <p class="text-muted">Training sessions for individuals interested in becoming Peace Ambassadors. Learn how to promote peace and unity in your community.</p>
+                            <p class="mb-0">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                <strong>Location:</strong> Multiple Locations Across Uganda
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-warning">Ongoing</span>
+                                <small class="text-muted">2026</small>
+                            </div>
+                            <h5 class="fw-bold">National Preservation Campaigns</h5>
+                            <p class="text-muted">Community action drives including clean-ups, tree planting, and facility restoration to protect Uganda's natural resources and infrastructure.</p>
+                            <p class="mb-0">
+                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                <strong>Location:</strong> Communities Nationwide
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-info">Ongoing</span>
+                                <small class="text-muted">2026</small>
+                            </div>
+                            <h5 class="fw-bold">Media Campaigns for Peace</h5>
+                            <p class="text-muted">Multi-channel media campaigns reaching millions of Ugandans with messages of non-violence, tolerance, and peaceful political engagement.</p>
+                            <p class="mb-0">
+                                <i class="fas fa-bullhorn me-2 text-primary"></i>
+                                <strong>Platform:</strong> Radio, TV, Social Media, Print
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">News & Updates</h2>
+            <div class="row">
+                <% if (projects && projects.length > 0) { %>
+                    <% projects.forEach(project => { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <span class="badge bg-<%= project.status === 'Active' ? 'success' : 'secondary' %> mb-2">
+                                    <%= project.status %>
+                                </span>
+                                <h5 class="card-title fw-bold"><%= project.title %></h5>
+                                <p class="card-text"><%= project.description.substring(0, 100) %>...</p>
+                                <p class="text-muted small mb-0">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    <%= new Date(project.created_at).toLocaleDateString() %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                <% } else { %>
+                    <div class="col-12 text-center">
+                        <p class="lead">Stay tuned for updates and news from our community!</p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5">Photo Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item card border-0 shadow-sm">
+                        <div class="card-img-top bg-primary text-white text-center p-5" style="min-height: 200px;">
+                            <i class="fas fa-comments fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-center mb-0">Baraza for Peace</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item card border-0 shadow-sm">
+                        <div class="card-img-top bg-success text-white text-center p-5" style="min-height: 200px;">
+                            <i class="fas fa-user-shield fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-center mb-0">Peace Ambassador Training</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="gallery-item card border-0 shadow-sm">
+                        <div class="card-img-top bg-warning text-white text-center p-5" style="min-height: 200px;">
+                            <i class="fas fa-leaf fa-4x"></i>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-center mb-0">National Preservation Campaign</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved CTA -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-4">Get Involved</h2>
+                    <p class="lead mb-4">Join the movement for peace, unity, and national preservation</p>
+                    <p class="mb-4">Become a Peace Ambassador, participate in Barazas for Peace, or join our national preservation campaigns. Together, we can build a united, peaceful, and prosperous Uganda.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="/register" class="btn btn-light btn-lg">
+                            <i class="fas fa-user-plus me-2"></i>Join as Peace Ambassador
+                        </a>
+                        <a href="/register?interest=Community Member" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-users me-2"></i>Join as Community Member
+                        </a>
+                        <a href="/contact" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<%- include('partials/footer') %>
+
