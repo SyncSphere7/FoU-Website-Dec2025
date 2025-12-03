@@ -4,6 +4,10 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -24,24 +28,29 @@
       "dest": "/public/Duuwa/$1"
     },
     {
-      "src": "/FOU Launch/(.*)",
+      "src": "/FOU%20Launch/(.*)",
       "dest": "/public/FOU Launch/$1"
     },
     {
-      "src": "/Mbarara Tour/(.*)",
+      "src": "/Mbarara%20Tour/(.*)",
       "dest": "/public/Mbarara Tour/$1"
     },
     {
-      "src": "/Media launch/(.*)",
+      "src": "/Media%20launch/(.*)",
       "dest": "/public/Media launch/$1"
     },
     {
-      "src": "/Youth Reunion/(.*)",
+      "src": "/Youth%20Reunion/(.*)",
       "dest": "/public/Youth Reunion/$1"
     },
     {
       "src": "/(.*)",
       "dest": "/server.js"
     }
-  ]
+  ],
+  "functions": {
+    "server.js": {
+      "includeFiles": "views/**"
+    }
+  }
 }

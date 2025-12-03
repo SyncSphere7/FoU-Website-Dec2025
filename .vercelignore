@@ -1,0 +1,17 @@
+# Ignore these files when building the serverless function
+# Static files are served separately
+public/Duuwa
+public/FOU Launch
+public/Mbarara Tour
+public/Media launch
+public/Youth Reunion
+public/Logos/*.jpg
+public/Logos/*.jpeg
+public/Logos/*.png
+
+# Other files to ignore
+node_modules
+.git
+.env
+.DS_Store
+*.log
