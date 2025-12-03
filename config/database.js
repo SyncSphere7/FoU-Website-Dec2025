@@ -1,29 +1,33 @@
-const mysql = require('mysql2/promise');
+const { createClient } = require('@supabase/supabase-js');
 require('dotenv').config();
 
-// Create connection pool
-const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'friends_of_uganda_db',
-  port: process.env.DB_PORT || 3306,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-  enableKeepAlive: true,
-  keepAliveInitialDelay: 0
-});
+// Supabase Configuration
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
-// Test connection
-pool.getConnection()
-  .then(connection => {
-    console.log('Database connected successfully');
-    connection.release();
-  })
-  .catch(error => {
-    console.error('Database connection error:', error.message);
-  });
+// Check if Supabase is configured
+if (!supabaseUrl || !supabaseKey) {
+  console.warn('⚠️  Supabase credentials not configured. Database features will be limited.');
+  console.warn('   Set SUPABASE_URL and SUPABASE_ANON_KEY in your .env file or Vercel environment variables');
+}
 
-module.exports = pool;
+// Create Supabase client (or a mock if not configured)
+const supabase = supabaseUrl && supabaseKey 
+  ? createClient(supabaseUrl, supabaseKey)
+  : {
+      // Mock client for static deployment without database
+      from: () => ({
+        select: () => Promise.resolve({ data: [], error: null }),
+        insert: () => Promise.resolve({ data: null, error: { message: 'Database not configured' } }),
+        update: () => Promise.resolve({ data: null, error: { message: 'Database not configured' } }),
+        delete: () => Promise.resolve({ data: null, error: { message: 'Database not configured' } }),
+        eq: function() { return this; },
+        order: function() { return this; },
+        limit: function() { return this; },
+        maybeSingle: function() { return this; },
+        single: function() { return this; }
+      })
+    };
+
+module.exports = supabase;
 

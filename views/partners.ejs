@@ -1,0 +1,124 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Our Partners</h1>
+        <p class="lead">Organizations and individuals joining hands for peace in Uganda</p>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Building Peace Together</h2>
+                <p class="lead">Friends of Uganda collaborates with various organizations, community groups, and individuals who share our vision of a peaceful, united Uganda.</p>
+            </div>
+        </div>
+
+        <!-- Partnership Opportunities -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="partner-type-card h-100">
+                    <div class="partner-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Corporate Partners</h4>
+                    <p>Businesses committed to corporate social responsibility and investing in Uganda's peaceful future.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="partner-type-card h-100">
+                    <div class="partner-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h4>Institutional Partners</h4>
+                    <p>Educational institutions, religious organizations, and civil society groups working for peace.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="partner-type-card h-100">
+                    <div class="partner-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h4>International Partners</h4>
+                    <p>Global organizations supporting peace initiatives and development in East Africa.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Become a Partner -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="become-partner-card text-center">
+                    <h3 class="mb-4">Become a Partner</h3>
+                    <p class="mb-4">We are always looking for like-minded organizations and individuals to join our peace-building mission. Partnership opportunities include:</p>
+                    <ul class="partner-benefits text-start">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Co-hosting community dialogues and peace events</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Supporting youth peace ambassador programs</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Funding peace education initiatives</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Providing platforms for peace messaging</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Collaborating on research and documentation</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="/contact" class="btn btn-primary btn-lg">Contact Us About Partnership</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.partner-type-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-type-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.partner-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-black);
+}
+
+.become-partner-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border: 2px solid var(--primary-yellow);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.partner-benefits {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.partner-benefits li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+</style>
+
+<%- include('partials/footer') %>

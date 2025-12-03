@@ -1,0 +1,147 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Campaigns & Action Drives</h1>
+        <p class="lead">Active initiatives driving peace and unity across Uganda</p>
+    </div>
+</section>
+
+<!-- Current Campaigns -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Our Campaigns</h2>
+                <p class="lead">Friends of Uganda runs various campaigns aimed at promoting peace, countering hate speech, and fostering national unity.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Campaign 1 -->
+            <div class="col-lg-6">
+                <div class="campaign-card h-100">
+                    <div class="campaign-badge">Active</div>
+                    <div class="campaign-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Counter Hate Speech Campaign</h4>
+                    <p>An ongoing initiative to identify, report, and counter hate speech in traditional and social media platforms. We train communities to recognize harmful content and respond with peace-promoting messages.</p>
+                    <a href="/counter-hate-speech" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Campaign 2 -->
+            <div class="col-lg-6">
+                <div class="campaign-card h-100">
+                    <div class="campaign-badge">Active</div>
+                    <div class="campaign-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Community Dialogue Initiative</h4>
+                    <p>Bringing together diverse community members for structured dialogues on national unity, peaceful coexistence, and conflict resolution. These dialogues create safe spaces for open conversation.</p>
+                    <a href="/dialogue" class="btn btn-outline-primary">Join Dialogue</a>
+                </div>
+            </div>
+
+            <!-- Campaign 3 -->
+            <div class="col-lg-6">
+                <div class="campaign-card h-100">
+                    <div class="campaign-badge">Active</div>
+                    <div class="campaign-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Peace Ambassador Program</h4>
+                    <p>Training young Ugandans to become peace ambassadors in their communities, schools, and workplaces. Ambassadors learn conflict resolution, mediation, and peace advocacy skills.</p>
+                    <a href="/peace-ambassador" class="btn btn-outline-primary">Become an Ambassador</a>
+                </div>
+            </div>
+
+            <!-- Campaign 4 -->
+            <div class="col-lg-6">
+                <div class="campaign-card h-100">
+                    <div class="campaign-badge">Active</div>
+                    <div class="campaign-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Barazas for Peace</h4>
+                    <p>Traditional community gatherings reimagined for peace-building. Our barazas bring together local leaders, youth, and citizens to discuss peace issues and develop community action plans.</p>
+                    <a href="/barazas" class="btn btn-outline-primary">Find a Baraza</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Get Involved</h2>
+                <p class="lead mb-4">Join one of our campaigns and be part of the peace movement in Uganda.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="/volunteer" class="btn btn-primary btn-lg">Volunteer</a>
+                    <a href="/donate" class="btn btn-outline-dark btn-lg">Support a Campaign</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.campaign-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.campaign-card:hover {
+    transform: translateY(-5px);
+}
+
+.campaign-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.campaign-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.campaign-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-black);
+}
+
+.campaign-card h4 {
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.campaign-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+</style>
+
+<%- include('partials/footer') %>

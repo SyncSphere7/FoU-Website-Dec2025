@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Citizen Success Stories</h1>
+        <p class="lead">Real stories of peace-building and transformation</p>
+    </div>
+</section>
+
+<!-- Stories Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Coming Soon Message -->
+                <div class="stories-coming-soon text-center">
+                    <i class="fas fa-book-open fa-4x text-muted mb-4"></i>
+                    <h2>Stories Coming Soon</h2>
+                    <p class="lead mb-4">We're collecting inspiring stories from Ugandans who are making a difference in their communities through peace-building.</p>
+                    <div class="story-teaser">
+                        <h4>Stories We'll Feature:</h4>
+                        <ul class="story-types text-start">
+                            <li><i class="fas fa-star text-warning me-2"></i> Peace Ambassadors making impact in their communities</li>
+                            <li><i class="fas fa-star text-warning me-2"></i> Community leaders bridging divides</li>
+                            <li><i class="fas fa-star text-warning me-2"></i> Youth championing peace in schools</li>
+                            <li><i class="fas fa-star text-warning me-2"></i> Neighbors resolving conflicts peacefully</li>
+                            <li><i class="fas fa-star text-warning me-2"></i> Former adversaries becoming friends</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Share Your Story -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h3 class="mb-4">Share Your Story</h3>
+                <p class="lead mb-4">Do you have a peace-building story to share? We'd love to hear from you! Your story could inspire others to take action for peace.</p>
+                <a href="/contact" class="btn btn-primary btn-lg">Share Your Story</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.stories-coming-soon {
+    background: #fff;
+    border-radius: 20px;
+    padding: 4rem;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    margin: 2rem 0;
+}
+
+.story-teaser {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.story-types {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto 0;
+    max-width: 400px;
+}
+
+.story-types li {
+    padding: 0.5rem 0;
+    font-size: 1.05rem;
+}
+</style>
+
+<%- include('partials/footer') %>

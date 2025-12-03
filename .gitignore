@@ -1,13 +1,41 @@
+# Dependencies
 node_modules/
+
+# Environment variables (NEVER commit these)
 .env
+.env.local
+.env.*.local
+
+# Logs
 *.log
+npm-debug.log*
+
+# OS files
 .DS_Store
-uploads/
+Thumbs.db
+
+# IDE/Editor
 .idea/
 .vscode/
+*.swp
+*.swo
+
+# Uploads and user content
+uploads/
+
+# SSL/Security files
 *.pem
 *.key
 *.crt
+
+# Build outputs
 dist/
 build/
+.vercel/
+
+# Debug
+*.debug
+
+# Supabase local
+.supabase/
 

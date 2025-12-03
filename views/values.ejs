@@ -1,0 +1,141 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Our Core Values</h1>
+        <p class="lead">The principles that guide Friends of Uganda in building a peaceful nation</p>
+    </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <p class="lead">At Friends of Uganda, our values are the foundation of everything we do. They shape our approach to peace-building and guide our interactions with communities across Uganda.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Value 1: Unity -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-holding-circle"></i>
+                    </div>
+                    <h3>Unity</h3>
+                    <p>We believe that Uganda's strength lies in its diversity. We work to bridge divides and foster a sense of national identity that transcends ethnic, religious, and political differences.</p>
+                </div>
+            </div>
+
+            <!-- Value 2: Peace -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                    <h3>Peace</h3>
+                    <p>Peace is not just the absence of conflict—it's the presence of justice, equality, and mutual respect. We champion dialogue over division and reconciliation over revenge.</p>
+                </div>
+            </div>
+
+            <!-- Value 3: Patriotism -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Patriotism</h3>
+                    <p>We love our nation and are committed to its prosperity. True patriotism means working for the common good and putting Uganda's interests above personal or sectarian interests.</p>
+                </div>
+            </div>
+
+            <!-- Value 4: Integrity -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We uphold the highest standards of honesty and transparency in all our actions. Our word is our bond, and we lead by example in ethical conduct.</p>
+                </div>
+            </div>
+
+            <!-- Value 5: Inclusivity -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Inclusivity</h3>
+                    <p>Every Ugandan has a voice and a role to play in nation-building. We embrace diversity and ensure that our platforms are accessible to all, regardless of background.</p>
+                </div>
+            </div>
+
+            <!-- Value 6: Service -->
+            <div class="col-lg-4 col-md-6">
+                <div class="value-card h-100">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Service</h3>
+                    <p>We are servant leaders, dedicated to serving our communities selflessly. Our mission is not about personal gain but about creating lasting positive change for all Ugandans.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-5 pt-4">
+            <h3 class="mb-4">Live These Values With Us</h3>
+            <p class="mb-4">Join the movement of Ugandans committed to building a peaceful, united nation.</p>
+            <a href="/registration" class="btn btn-primary btn-lg me-3">Become a Peace Ambassador</a>
+            <a href="/about" class="btn btn-outline-dark btn-lg">Learn More About FoU</a>
+        </div>
+    </div>
+</section>
+
+<style>
+.value-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: var(--primary-black);
+}
+
+.value-card h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-black);
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.7;
+}
+</style>
+
+<%- include('partials/footer') %>

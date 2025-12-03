@@ -1,0 +1,163 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Barazas for Peace</h1>
+        <p class="lead">Traditional gatherings reimagined for peace-building</p>
+    </div>
+</section>
+
+<!-- About Barazas -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="section-title">What are Barazas?</h2>
+                <p class="lead">Barazas are traditional East African community gatherings where people come together to discuss important issues affecting their communities.</p>
+                <p>Friends of Uganda has adapted this powerful tradition for peace-building, creating safe spaces where diverse community members can:</p>
+                <ul class="baraza-features">
+                    <li><i class="fas fa-dove text-primary me-2"></i> Discuss peace and unity issues openly</li>
+                    <li><i class="fas fa-handshake text-primary me-2"></i> Resolve conflicts through dialogue</li>
+                    <li><i class="fas fa-users text-primary me-2"></i> Build bridges across divides</li>
+                    <li><i class="fas fa-lightbulb text-primary me-2"></i> Develop community action plans</li>
+                    <li><i class="fas fa-heart text-primary me-2"></i> Promote tolerance and understanding</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="baraza-image-placeholder">
+                    <i class="fas fa-users-cog"></i>
+                    <p>Community Baraza in Session</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Baraza Structure -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">How Our Barazas Work</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="baraza-step">
+                    <div class="step-number">1</div>
+                    <h5>Community Mobilization</h5>
+                    <p>We work with local leaders to invite diverse community members to participate.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="baraza-step">
+                    <div class="step-number">2</div>
+                    <h5>Facilitated Dialogue</h5>
+                    <p>Trained facilitators guide discussions on peace, unity, and community issues.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="baraza-step">
+                    <div class="step-number">3</div>
+                    <h5>Action Planning</h5>
+                    <p>Communities develop concrete action plans to address identified challenges.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="baraza-step">
+                    <div class="step-number">4</div>
+                    <h5>Follow-up</h5>
+                    <p>We support communities in implementing their action plans and track progress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Barazas -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Upcoming Barazas</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="upcoming-message text-center">
+                    <i class="fas fa-calendar-alt fa-3x text-muted mb-3"></i>
+                    <h4>Stay Tuned!</h4>
+                    <p class="lead">New barazas are being planned across different regions of Uganda. Sign up to be notified when a baraza is scheduled in your area.</p>
+                    <a href="/contact" class="btn btn-primary btn-lg mt-3">Get Notified</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Host a Baraza -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Host a Baraza in Your Community</h2>
+                <p class="lead mb-4">Do you want to bring a peace baraza to your community? We provide training, facilitation support, and resources to help you organize a successful baraza.</p>
+                <a href="/contact" class="btn btn-warning btn-lg">Request a Baraza</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.baraza-features {
+    list-style: none;
+    padding: 0;
+}
+
+.baraza-features li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.baraza-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, #ffeaa7 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.baraza-image-placeholder i {
+    font-size: 4rem;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.baraza-step {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    color: var(--primary-black);
+}
+
+.upcoming-message {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 3rem;
+}
+</style>
+
+<%- include('partials/footer') %>

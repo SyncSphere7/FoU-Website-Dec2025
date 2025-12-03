@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/public/js/$1"
+    },
+    {
+      "src": "/Logos/(.*)",
+      "dest": "/public/Logos/$1"
+    },
+    {
+      "src": "/Duuwa/(.*)",
+      "dest": "/public/Duuwa/$1"
+    },
+    {
+      "src": "/FOU Launch/(.*)",
+      "dest": "/public/FOU Launch/$1"
+    },
+    {
+      "src": "/Mbarara Tour/(.*)",
+      "dest": "/public/Mbarara Tour/$1"
+    },
+    {
+      "src": "/Media launch/(.*)",
+      "dest": "/public/Media launch/$1"
+    },
+    {
+      "src": "/Youth Reunion/(.*)",
+      "dest": "/public/Youth Reunion/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}

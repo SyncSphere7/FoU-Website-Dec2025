@@ -1,0 +1,185 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Photo Gallery</h1>
+        <p class="lead">Moments captured from our peace-building journey</p>
+    </div>
+</section>
+
+<!-- Gallery Introduction -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Our Events in Pictures</h2>
+                <p class="lead">Explore photos from our milestones, community dialogues, and peace events across Uganda.</p>
+            </div>
+        </div>
+
+        <!-- Gallery Navigation -->
+        <div class="gallery-nav mb-5">
+            <a href="/milestone/fou-launch" class="gallery-nav-item">
+                <div class="gallery-nav-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <span>FoU Launch</span>
+            </a>
+            <a href="/milestone/media-launch" class="gallery-nav-item">
+                <div class="gallery-nav-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <span>Media Launch</span>
+            </a>
+            <a href="/milestone/duuwa-campaign" class="gallery-nav-item">
+                <div class="gallery-nav-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <span>Duuwa Campaign</span>
+            </a>
+            <a href="/milestone/mbarara-outreach" class="gallery-nav-item">
+                <div class="gallery-nav-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>Mbarara Tour</span>
+            </a>
+            <a href="/milestone/youth-reunion" class="gallery-nav-item">
+                <div class="gallery-nav-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span>Youth Reunion</span>
+            </a>
+        </div>
+
+        <!-- Featured Gallery Preview -->
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-6">
+                <a href="/milestone/fou-launch" class="gallery-preview">
+                    <img src="/FOU Launch/highlight 1.jpg" alt="FoU Launch" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <span>FoU Launch Gallery</span>
+                        <small>60+ Photos</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/milestone/media-launch" class="gallery-preview">
+                    <img src="/Media launch/media highlight 1.jpeg" alt="Media Launch" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <span>Media Launch Gallery</span>
+                        <small>40+ Photos</small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <a href="/milestone/duuwa-campaign" class="gallery-preview">
+                    <img src="/Duuwa/Duuwa highlight 1.jpeg" alt="Duuwa Campaign" class="img-fluid rounded">
+                    <div class="gallery-overlay">
+                        <span>Duuwa Campaign Gallery</span>
+                        <small>45+ Photos</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- More Coming -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <i class="fas fa-camera fa-3x text-muted mb-3"></i>
+                <h3>More Photos Coming Soon</h3>
+                <p class="lead mb-4">We're constantly documenting our peace-building activities. Check back for new galleries from upcoming events.</p>
+                <a href="/contact" class="btn btn-primary">Share Your Event Photos</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.gallery-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: var(--primary-black);
+    transition: all 0.3s ease;
+}
+
+.gallery-nav-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    color: var(--primary-black);
+}
+
+.gallery-nav-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-nav-icon i {
+    font-size: 1.2rem;
+}
+
+.gallery-preview {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 250px;
+}
+
+.gallery-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-preview:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-overlay span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.gallery-overlay small {
+    opacity: 0.8;
+}
+</style>
+
+<%- include('partials/footer') %>

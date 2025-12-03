@@ -1,0 +1,233 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Community Dialogue</h1>
+        <p class="lead">Creating spaces for open, honest conversations about peace</p>
+    </div>
+</section>
+
+<!-- About Dialogue -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="section-title">The Power of Dialogue</h2>
+                <p class="lead">True peace begins with understanding. Our Community Dialogue Initiative brings together people from different backgrounds to have honest, facilitated conversations about issues that affect our nation.</p>
+                <p>Through structured dialogue, we:</p>
+                <ul class="dialogue-benefits">
+                    <li><i class="fas fa-comments text-primary me-2"></i> Break down stereotypes and misconceptions</li>
+                    <li><i class="fas fa-bridge text-primary me-2"></i> Bridge divides between communities</li>
+                    <li><i class="fas fa-handshake text-primary me-2"></i> Build trust and mutual understanding</li>
+                    <li><i class="fas fa-lightbulb text-primary me-2"></i> Find common ground on difficult issues</li>
+                    <li><i class="fas fa-heart text-primary me-2"></i> Heal wounds from past conflicts</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="dialogue-image-placeholder">
+                    <i class="fas fa-comments"></i>
+                    <p>Community Dialogue Session</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dialogue Topics -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">What We Discuss</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h5>National Unity</h5>
+                    <p>What does it mean to be Ugandan? How can we celebrate our diversity while building unity?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-vote-yea"></i>
+                    </div>
+                    <h5>Electoral Peace</h5>
+                    <p>How can we have peaceful elections? What role do citizens play in preventing electoral violence?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5>Youth & Peace</h5>
+                    <p>How can young people be agents of peace? What challenges do youth face?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <h5>Religious Tolerance</h5>
+                    <p>How can different faith communities live and work together peacefully?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h5>Ethnic Harmony</h5>
+                    <p>How do we address ethnic tensions and build bridges across tribal lines?</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="topic-card h-100">
+                    <div class="topic-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h5>Justice & Reconciliation</h5>
+                    <p>How do we address past wrongs while moving forward together?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Join Dialogue -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="join-dialogue-card text-center">
+                    <h3 class="mb-4">Join Our Next Dialogue</h3>
+                    <p class="lead mb-4">We host regular community dialogues across Uganda. Register to be notified about upcoming sessions in your area.</p>
+                    <div class="dialogue-features-grid">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe Space</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Trained Facilitators</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-friends"></i>
+                            <span>Diverse Participants</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Action-Oriented</span>
+                        </div>
+                    </div>
+                    <a href="/registration" class="btn btn-primary btn-lg mt-4">Register for Dialogue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Request a Dialogue -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Bring Dialogue to Your Community</h2>
+                <p class="lead mb-4">Want to host a community dialogue in your area? We can help organize and facilitate meaningful conversations that bring people together.</p>
+                <a href="/contact" class="btn btn-warning btn-lg">Request a Dialogue</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.dialogue-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.dialogue-benefits li {
+    padding: 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.dialogue-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, #ffeaa7 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialogue-image-placeholder i {
+    font-size: 4rem;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.topic-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+.topic-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.topic-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-black);
+}
+
+.join-dialogue-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.dialogue-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.dialogue-features-grid .feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.dialogue-features-grid .feature i {
+    color: var(--primary-red);
+}
+</style>
+
+<%- include('partials/footer') %>

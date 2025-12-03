@@ -1,0 +1,226 @@
+<%- include('partials/header') %>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/Logos/header-logo.png') center/cover no-repeat; padding: 100px 0 60px;">
+    <div class="container text-center text-white">
+        <h1 class="display-4 fw-bold mb-3">Peace Ambassador Program</h1>
+        <p class="lead">Empowering young Ugandans to lead peace initiatives</p>
+    </div>
+</section>
+
+<!-- About the Program -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="section-title">Become a Peace Ambassador</h2>
+                <p class="lead">The Peace Ambassador Program trains and empowers young Ugandans to become advocates for peace in their communities, schools, and workplaces.</p>
+                <p>As a Peace Ambassador, you will gain valuable skills in conflict resolution, mediation, and community organizing while making a real difference in building a more peaceful Uganda.</p>
+                <a href="/registration" class="btn btn-primary btn-lg mt-3">Apply Now</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="ambassador-image-placeholder">
+                    <i class="fas fa-user-graduate"></i>
+                    <p>Peace Ambassador Training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Benefits -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">What You'll Gain</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h4>Training & Skills</h4>
+                    <ul>
+                        <li>Conflict resolution techniques</li>
+                        <li>Mediation and negotiation</li>
+                        <li>Public speaking</li>
+                        <li>Community organizing</li>
+                        <li>Peace advocacy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h4>Network & Community</h4>
+                    <ul>
+                        <li>Connect with other peace advocates</li>
+                        <li>Access to FoU events and programs</li>
+                        <li>Mentorship opportunities</li>
+                        <li>National network of ambassadors</li>
+                        <li>Alumni community</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Recognition</h4>
+                    <ul>
+                        <li>Official Peace Ambassador certificate</li>
+                        <li>FoU Ambassador badge</li>
+                        <li>Featured in FoU publications</li>
+                        <li>Leadership opportunities</li>
+                        <li>Recommendation letters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Requirements -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="section-title text-center mb-5">Who Can Apply?</h2>
+                <div class="requirements-card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Requirements</h5>
+                            <ul>
+                                <li>Ugandan citizen or resident</li>
+                                <li>Age 18-35 years</li>
+                                <li>Passion for peace and unity</li>
+                                <li>Good communication skills</li>
+                                <li>Commitment to program activities</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-clock text-warning me-2"></i>Time Commitment</h5>
+                            <ul>
+                                <li>Initial training: 2-day workshop</li>
+                                <li>Monthly ambassador meetings</li>
+                                <li>Quarterly community activities</li>
+                                <li>Ongoing learning sessions</li>
+                                <li>Flexible volunteer hours</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Apply CTA -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4">Ready to Make a Difference?</h2>
+                <p class="lead mb-4">Join our next cohort of Peace Ambassadors and be part of the movement for a peaceful Uganda.</p>
+                <a href="/registration" class="btn btn-warning btn-lg">Apply to Become a Peace Ambassador</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.ambassador-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, #ffeaa7 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ambassador-image-placeholder i {
+    font-size: 4rem;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.benefit-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-black);
+}
+
+.benefit-card h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-black);
+}
+
+.benefit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-card ul li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefit-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+}
+
+.requirements-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.requirements-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements-card ul li {
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.requirements-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-yellow);
+    font-weight: bold;
+}
+</style>
+
+<%- include('partials/footer') %>
