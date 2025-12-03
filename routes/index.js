@@ -163,5 +163,103 @@ router.get('/privacy', (req, res) => {
   });
 });
 
+// Gallery page
+router.get('/gallery', (req, res) => {
+  res.render('gallery', {
+    title: 'Gallery - Friends of Uganda',
+    page: 'gallery'
+  });
+});
+
+// Milestone data for each event
+const milestones = {
+  'fou-launch': {
+    title: 'FOU Launch',
+    date: 'November 2024',
+    location: 'Kampala, Uganda',
+    description: 'The official launch of Friends of Uganda, bringing together community leaders, peace advocates, and citizens united for a common cause.',
+    images: [
+      '/FOU%20Launch/FoU%20Launch%20Hero%20section.jpg',
+      '/FOU%20Launch/highlight%201.jpg',
+      '/FOU%20Launch/Highlight%202.jpg',
+      '/FOU%20Launch/Highlight%203.jpg',
+      '/FOU%20Launch/highlight%204.jpg',
+      '/FOU%20Launch/highlight%205.jpg'
+    ],
+    status: 'completed'
+  },
+  'media-launch': {
+    title: 'Media Launch',
+    date: 'November 2024',
+    location: 'Kampala, Uganda',
+    description: 'Official media launch introducing Friends of Uganda to the press and public, sharing our vision for peace and unity.',
+    images: [
+      '/Media%20launch/media%20highlight%201.jpeg',
+      '/Media%20launch/media%20highlight%202.jpeg',
+      '/Media%20launch/media%20highlight%203.jpeg',
+      '/Media%20launch/media%20highlight%204.jpeg',
+      '/Media%20launch/media%20highlight%205.jpeg'
+    ],
+    status: 'completed'
+  },
+  'duuwa-campaign': {
+    title: 'Duuwa Campaign',
+    date: 'November 2024',
+    location: 'Various Locations, Uganda',
+    description: 'The Duuwa Campaign - a grassroots movement promoting peace dialogue and community engagement across Uganda.',
+    images: [
+      '/Duuwa/Duuwa%20highlight%201.jpeg',
+      '/Duuwa/Duuwa%20highlight%202.jpeg',
+      '/Duuwa/Duuwa%20highlight%203.jpeg',
+      '/Duuwa/Duuwa%20highlight%204.jpeg',
+      '/Duuwa/Duuwa%20highlight%205.jpeg'
+    ],
+    status: 'completed'
+  },
+  'mbarara-outreach': {
+    title: 'Mbarara Outreach Tour',
+    date: 'November 2024',
+    location: 'Mbarara, Uganda',
+    description: 'Community outreach in Mbarara, engaging local leaders and youth in peace-building initiatives.',
+    images: [
+      '/Mbarara%20Tour/WhatsApp%20Image%202025-12-01%20at%207.07.00%20AM.jpeg',
+      '/Mbarara%20Tour/WhatsApp%20Image%202025-12-01%20at%207.07.01%20AM.jpeg',
+      '/Mbarara%20Tour/WhatsApp%20Image%202025-12-01%20at%207.07.01%20AM%20(1).jpeg',
+      '/Mbarara%20Tour/WhatsApp%20Image%202025-12-01%20at%207.07.02%20AM.jpeg',
+      '/Mbarara%20Tour/WhatsApp%20Image%202025-12-01%20at%207.07.02%20AM%20(1).jpeg'
+    ],
+    status: 'completed'
+  },
+  'youth-reunion': {
+    title: 'Youth Reunion',
+    date: 'November 2024',
+    location: 'Kampala, Uganda',
+    description: 'A gathering of young peace ambassadors, sharing experiences and strengthening the youth peace network.',
+    images: [
+      '/Youth%20Reunion/Youth%20reunion.jpeg'
+    ],
+    status: 'completed'
+  }
+};
+
+// Milestone detail page
+router.get('/milestone/:slug', (req, res) => {
+  const slug = req.params.slug;
+  const milestone = milestones[slug];
+  
+  if (!milestone) {
+    return res.status(404).render('404', {
+      title: 'Milestone Not Found - Friends of Uganda',
+      page: '404'
+    });
+  }
+  
+  res.render('milestone', {
+    title: `${milestone.title} - Friends of Uganda`,
+    page: 'milestone',
+    milestone: milestone
+  });
+});
+
 module.exports = router;
 
